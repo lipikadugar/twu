@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 /**
- * Created by lipikad on 7/6/15.
+ * Created by lipikad on 7/7/15.
  */
-public class Diamond_Isosceles {
+public class Diamond_Name {
     public static void main(String args[])
     {
         int n;
@@ -12,7 +12,7 @@ public class Diamond_Isosceles {
         System.out.print("Enter a number: ");
         n=in.nextInt();
 
-        for (int i=0;i<n;i++)
+        for (int i=0;i<n-1;i++)
         {
             for(int j=0;j<n-i-1;j++)
             {
@@ -22,18 +22,17 @@ public class Diamond_Isosceles {
             l.inner(i-1);
             System.out.println("");
         }
-    }
-}
-
-class Loop
-{
-    public void inner(int num)
-    {
-        for(int j=0;j<=num;j++)
+        System.out.println("Lipika");
+        for(int i=n-1;i>0;i--)
         {
-            System.out.print("*");
+            for(int j=0;j<n-i;j++)
+            {
+                System.out.print(" ");
+            }
+            l.inner(i-1);
+            l.inner(i-2);
+            System.out.println("");
+
         }
     }
 }
-
-

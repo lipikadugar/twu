@@ -3,7 +3,7 @@ import java.util.Scanner;
 /**
  * Created by lipikad on 7/6/15.
  */
-public class Diamond_Isosceles {
+public class Diamond {
     public static void main(String args[])
     {
         int n;
@@ -22,18 +22,19 @@ public class Diamond_Isosceles {
             l.inner(i-1);
             System.out.println("");
         }
-    }
-}
-
-class Loop
-{
-    public void inner(int num)
-    {
-        for(int j=0;j<=num;j++)
+        for(int i=n-1;i>0;i--)
         {
-            System.out.print("*");
+            for(int j=0;j<n-i;j++)
+            {
+                System.out.print(" ");
+            }
+            l.inner(i-1);
+            l.inner(i-2);
+            System.out.println("");
+
         }
     }
 }
+
 
 
